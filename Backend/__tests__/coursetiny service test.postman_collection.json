@@ -1,0 +1,1193 @@
+{
+	"id": "d5ac38be-93fb-4d2b-9d65-6d446e5ba8b5",
+	"name": "coursetiny service test",
+	"description": "coursetiny service test",
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5d1a57ce-23c0-4d15-9a5f-b956ce3794fe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b69f21b3-4cc1-4025-a5e2-89b5ee4d18da",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [],
+	"order": [
+		"157a1587-4b29-486d-8bde-f706cfc88a65",
+		"d6e13fef-9014-4a06-b3a7-e27fa0b03b9d",
+		"7ea6ffbc-dd7a-4917-aa55-da4cb1d480a9",
+		"da0af531-1f31-42c5-b793-c9cbd682aba7",
+		"a73809b3-263f-463e-8bb0-ba0b82100ede",
+		"115b2020-a2d0-4c2d-aad0-81d4dc491feb",
+		"82980680-3fb6-4fdb-bb7f-4541876ea124",
+		"1611ac13-aa08-45d5-9ce7-09a7d72011dd",
+		"087f6b75-cb65-4985-b848-7554dbb74414",
+		"19a572f8-b1fc-4431-9c51-d8abb650eb5a",
+		"6a0b987f-f17e-4eb6-ad24-e1654b29be1e",
+		"6f2bfc1b-0e87-4fb1-9f8b-3236bb7d69db",
+		"0ae26caf-50c1-42bd-a06a-0cd2e8c392c1",
+		"463e79fb-79ba-4dee-9bc2-1fe4f89991b7",
+		"01529ee9-20ee-4769-b850-b070f1f2f7eb",
+		"e9fe45e7-3206-4e0d-8bae-29214b402202",
+		"a422f172-471b-4032-918a-91901555c20c",
+		"41fd009f-0524-4b78-aa74-ada76f52cc87",
+		"5ac15810-67f5-4ecf-9ec4-8742fbccc079",
+		"5b611009-14c3-4b22-b4cb-a4e8c53453eb",
+		"cc4e2ac7-73fa-4457-953e-bc6359c43b80",
+		"864019ea-ca2d-49d9-b455-331ffb133289",
+		"3c3aed4f-827a-4410-9890-539c3bbd81a1",
+		"5340c155-7dfc-4e40-a26b-dda5e42ad1ad",
+		"70615924-027e-411c-8cb5-cf80765c82c9",
+		"0c879a7b-6257-4f57-abca-ca92bcb64da8",
+		"45180124-a508-4251-bd06-d018c90af048",
+		"6d08a2cf-cb70-49c9-a2d5-0e83446b193a",
+		"ea03d066-c44f-4ddf-bb50-b7bb10f8a973",
+		"2a32d2c9-11fe-43fa-9d80-97042f0dd4a9",
+		"49cf8522-21bb-4bbe-b256-882e4021536f",
+		"fe7c0024-da46-4ce9-a30d-5f2b71f25e8d",
+		"2c6cefb5-4ccc-4228-a631-9e11130f2e5f"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "01529ee9-20ee-4769-b850-b070f1f2f7eb",
+			"name": "Create user skill",
+			"url": "localhost:3030/api/user/24/skills",
+			"description": "Create user skill",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4f74d48-40e0-4edf-8649-a269bbc1c08d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"name\": \"test\",\n  \"level\": \"test\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "087f6b75-cb65-4985-b848-7554dbb74414",
+			"name": "Update user profile 2",
+			"url": "localhost:3030/api/user/asfasfasfas",
+			"description": "update user profile not found id",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f6b0333-c35e-4408-ba81-c46f1a1150fb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Id not found\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"username\": \"teszzzt\",\n  \"firstName\": \"aaaaa\",\n  \"lastName\": \"aabbbb\",\n  \"birthday\": \"1992-10-19\",\n  \"sex\": \"male\",\n  \"mobileNumber\": \"0891233627\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0ae26caf-50c1-42bd-a06a-0cd2e8c392c1",
+			"name": "Update user password",
+			"url": "localhost:3030/api/user/24/password",
+			"description": "update user password with old pass and new pass don't match",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7cc6ca13-4932-4a41-a8f5-f50a077e5ebd",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Password don't match\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"oldPassword\": \"1111bbw21\",\n  \"password\": \"12345678\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0c879a7b-6257-4f57-abca-ca92bcb64da8",
+			"name": "User information",
+			"url": "localhost:3030/api/user/24",
+			"description": "User information",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "115b2020-a2d0-4c2d-aad0-81d4dc491feb",
+			"name": "Get course tickets",
+			"url": "localhost:3030/api/courses/45/tickets",
+			"description": "Get course tickets",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "157a1587-4b29-486d-8bde-f706cfc88a65",
+			"name": "Sign in",
+			"url": "localhost:3030/api/auth/signin",
+			"description": "Sign in",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f26f7051-14c9-4775-944b-4b8fc3879b8f",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t    \"email\": \"panotza@hotmail.com\",\n\t    \"password\": \"12345678\",\n\t    \"remember\": false\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "1611ac13-aa08-45d5-9ce7-09a7d72011dd",
+			"name": "Update user profile",
+			"url": "localhost:3030/api/user/26",
+			"description": "update user profile",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "19c87243-9c0e-40e7-b737-f0602c07bd67",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"username\": \"teszzzt\",\n  \"firstName\": \"aaaaa\",\n  \"lastName\": \"aabbbb\",\n  \"birthday\": \"1992-10-19\",\n  \"sex\": \"male\",\n  \"mobileNumber\": \"0891233627\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "19a572f8-b1fc-4431-9c51-d8abb650eb5a",
+			"name": "Update user profile photo 2",
+			"url": "localhost:3030/api/user/223/profile-photo",
+			"description": "Update user profile photo with random id",
+			"data": [
+				{
+					"key": "profilePhoto",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df446f8c-dd8f-4d1d-8ac8-ffc59605b5f1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Id not found\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2a32d2c9-11fe-43fa-9d80-97042f0dd4a9",
+			"name": "Get order information 2",
+			"url": "localhost:3030/api/orders/12999",
+			"description": "get order information not found order id",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cfb53dc5-b7e2-48fe-9e0a-fc6f79a1e1c3",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Id not found\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2c6cefb5-4ccc-4228-a631-9e11130f2e5f",
+			"name": "Sign out",
+			"url": "localhost:3030/api/auth/signout",
+			"description": "Sign out",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cec3cda8-a808-4913-87c5-fd40f307bc9b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "3c3aed4f-827a-4410-9890-539c3bbd81a1",
+			"name": "Delete user skill",
+			"url": "localhost:3030/api/user/24/skills/56",
+			"description": "delete user skill",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "05365a89-9024-443a-9647-52a61dfe9727",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "41fd009f-0524-4b78-aa74-ada76f52cc87",
+			"name": "Update user experience",
+			"url": "localhost:3030/api/user/24/experience/7555",
+			"description": "Update user experience",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4819c037-b5bd-4e6e-8850-94a67233f346",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Skill id not found\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"company\": \"11\",\n  \"position\": \"aa\",\n  \"startMonth\": \"2\",\n  \"startYear\": \"2011\",\n  \"endMonth\": \"5\",\n  \"endYear\": \"2013\",\n  \"isCurrent\": 0\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "45180124-a508-4251-bd06-d018c90af048",
+			"name": "Get categories list",
+			"url": "localhost:3030/api/categories",
+			"description": "Get categories list",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "463e79fb-79ba-4dee-9bc2-1fe4f89991b7",
+			"name": "Create user experience",
+			"url": "localhost:3030/api/user/27/experience",
+			"description": "Create user experience",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n  \"company\": \"test\",\n  \"position\": \"test\",\n  \"startMonth\": 2,\n  \"startYear\": 2011,\n  \"endMonth\": \"\",\n  \"endYear\": \"\",\n  \"isCurrent\": 1\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "49cf8522-21bb-4bbe-b256-882e4021536f",
+			"name": "Create Order",
+			"url": "localhost:3030/api/orders",
+			"description": "Create Order",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n    \"tickets\": [\n      {\n        \"id\": 54,\n        \"amount\": 1\n      },\n      {\n        \"id\": 55,\n        \"amount\": 2\n      }\n    ]\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5340c155-7dfc-4e40-a26b-dda5e42ad1ad",
+			"name": "Get user orders",
+			"url": "localhost:3030/api/user/24/orders",
+			"description": "Get user orders",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "5ac15810-67f5-4ecf-9ec4-8742fbccc079",
+			"name": "Update user experience 2",
+			"url": "localhost:3030/api/user/24/experience/75",
+			"description": "Update user experience",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f39113d-8658-45dc-acc0-a504aa4ee1d7",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"company\": \"11\",\n  \"position\": \"aa\",\n  \"startMonth\": \"2\",\n  \"startYear\": \"2011\",\n  \"endMonth\": \"5\",\n  \"endYear\": \"2013\",\n  \"isCurrent\": 0\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "5b611009-14c3-4b22-b4cb-a4e8c53453eb",
+			"name": "Update user skill",
+			"url": "localhost:3030/api/user/24/skills/51",
+			"description": "update user skill",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "937961ca-6c8f-46c2-8b25-8bb1ed10848e",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"name\": \"dotA2\",\n  \"level\": \"hight\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6a0b987f-f17e-4eb6-ad24-e1654b29be1e",
+			"name": "Update user profile basic",
+			"url": "localhost:3030/api/user/24/basic",
+			"description": "update user profile basic",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4ee41a4c-9a2a-422b-b26a-20dd1287d978",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"aboutMe\": \"tetst\",\n  \"website\": \"http://test.com\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6d08a2cf-cb70-49c9-a2d5-0e83446b193a",
+			"name": "Get id card form option list",
+			"url": "localhost:3030/api/categories",
+			"description": "Get id card form option list",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "6f2bfc1b-0e87-4fb1-9f8b-3236bb7d69db",
+			"name": "Update user profile basic 2",
+			"url": "localhost:3030/api/user/2adsasdasda4/basic",
+			"description": "update user profile basic",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f4273e0c-5c23-43c4-8cca-9b7dc7a2febe",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Wrong password\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n  \"aboutMe\": \"tetst\",\n  \"website\": \"test\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "70615924-027e-411c-8cb5-cf80765c82c9",
+			"name": "Get user",
+			"url": "localhost:3030/api/user/courses",
+			"description": "Get user",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "7ea6ffbc-dd7a-4917-aa55-da4cb1d480a9",
+			"name": "Check auth",
+			"url": "localhost:3030/api/auth/check",
+			"description": "Check auth",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "36f578d6-5232-4939-92fc-b474f9685a30",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "82980680-3fb6-4fdb-bb7f-4541876ea124",
+			"name": "Create course",
+			"url": "localhost:3030/api/courses",
+			"description": "Create course",
+			"data": [
+				{
+					"key": "cover",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				},
+				{
+					"key": "title",
+					"value": "courseNameTest",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "startDate",
+					"value": "2018-02-23",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "endDate",
+					"value": "2018-02-28",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "location",
+					"value": "somewhere",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "some text",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tickets",
+					"value": "[\n        {\n            \"name\": \"Early Bird\",\n            \"detail\": \"some detail\",\n            \"startDate\": \"2018-01-16\",\n            \"endDate\": \"2018-01-17\",\n            \"price\": 1500,\n            \"quantity\": 20\n        },\n        {\n            \"name\": \"Regular\",\n            \"detail\": \"some detail\",\n            \"startDate\": \"2018-01-16\",\n            \"endDate\": \"2018-01-17\",\n            \"price\": 2500,\n            \"quantity\": 50\n        }\n    ]",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "864019ea-ca2d-49d9-b455-331ffb133289",
+			"name": "Delete user skill",
+			"url": "localhost:3030/api/user/24/experience/78",
+			"description": "Delete user skill",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a422f172-471b-4032-918a-91901555c20c",
+			"name": "Create or replace user bank 2",
+			"url": "localhost:3030/api/user/24/bank",
+			"description": "Create or replace user bank",
+			"data": [
+				{
+					"key": "bankId",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "branch",
+					"value": "aaaa",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "accountNo",
+					"value": "12242342-34234234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "bookPhoto",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed0fbf39-e35c-42f6-9253-6f6c06c4a92a",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Id not found\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a73809b3-263f-463e-8bb0-ba0b82100ede",
+			"name": "Get course by title",
+			"url": "localhost:3030/api/courses/tested",
+			"description": "Get course tickets by title",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "cc4e2ac7-73fa-4457-953e-bc6359c43b80",
+			"name": "Delete user education",
+			"url": "localhost:3030/api/user/24/education/96",
+			"description": "Delete user education",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ab7aac1d-fced-479b-8d58-5ab9986fd13d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d6e13fef-9014-4a06-b3a7-e27fa0b03b9d",
+			"name": "Sign in 2",
+			"url": "localhost:3030/api/auth/signin",
+			"description": "Sign in fail",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "901313d3-1609-4ac4-820c-87eb73c9e4c1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Wrong password\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"rawModeData": "{\n\t    \"email\": \"panotza@hotmail.com\",\n\t    \"password\": \"1234asdsad5678\",\n\t    \"remember\": false\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "da0af531-1f31-42c5-b793-c9cbd682aba7",
+			"name": "Get all course ",
+			"url": "localhost:3030/api/courses",
+			"description": "Get all course ",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "e9fe45e7-3206-4e0d-8bae-29214b402202",
+			"name": "Create or replace user id card 2",
+			"url": "localhost:3030/api/user/24/idcard",
+			"description": "Create or replace user id card with fail number",
+			"data": [
+				{
+					"key": "number",
+					"value": "123415151777124124127",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "titleId",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "firstName",
+					"value": "john",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "lastName",
+					"value": "doe",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "maritalStatusId",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "currentAddress",
+					"value": "aa aaa csdsd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "idCardAddress",
+					"value": "aa aaa csdsd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "idCardPhoto",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "55da5150-5ce1-470e-a616-a64330ee9c80",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"too long number\", function () { ",
+							"    pm.response.to.have.jsonBody(\"error\"); ",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "ea03d066-c44f-4ddf-bb50-b7bb10f8a973",
+			"name": "Get order information",
+			"url": "localhost:3030/api/orders/127",
+			"description": "get order information",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "26d43a82-924a-4bd3-b393-a870205d2b89",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"response is ok\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"response should be okay to process\", function () { ",
+							"    pm.response.to.not.be.error; ",
+							"    pm.response.to.have.jsonBody(\"\"); ",
+							"    pm.response.to.not.have.jsonBody(\"error\"); ",
+							"});"
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "fe7c0024-da46-4ce9-a30d-5f2b71f25e8d",
+			"name": "Delete order",
+			"url": "localhost:3030/api/orders/134",
+			"description": "Delete order",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}

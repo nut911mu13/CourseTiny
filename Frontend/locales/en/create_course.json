@@ -1,0 +1,28 @@
+{
+  "startDateEndDate": "Start Date - End Date",
+  "courseTitle": "Course Title",
+  "location": "Location",
+  "description": "Course Description",
+  "tickets": "Tickets",
+  "addTicket": "Add Ticket",
+  "editTicket": "Edit Ticket",
+  "detail": "Detail",
+  "startDate": "Start Date",
+  "endDate": "End Date",
+  "quantity": "Quantity",
+  "price": "Price",
+  "action": "Action",
+  "errors": {
+    "courseTitleRequired": "Please input your course title!",
+    "courseDateRequired": "Please select your course start date and end date!",
+    "locationRequired": "Please input your course location!",
+    "categoryRequired": "Please select your course category!",
+    "descriptionRequired": "Please input your course description!",
+    "ticketRequired": "Please create at least 1 ticket!",
+    "ticketNameRequired": "Please input your ticket name!",
+    "ticketDetailRequired": "Please input your ticket detail!",
+    "ticketDateRequired": "Please select your ticket start and end date!",
+    "ticketPriceRequired": "Please select your ticket price!",
+    "ticketQuantityRequired": "Please select your ticket quantity"
+  }
+}

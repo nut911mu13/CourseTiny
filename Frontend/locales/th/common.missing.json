@@ -1,0 +1,10 @@
+{
+  "errors": {
+    "ticketNameRequired": "errors.ticketNameRequired"
+  },
+  "_t": "Sun Mar 11 2018 19:33:50 GMT+0700 (SE Asia Standard Time)",
+  "Transfer date": "Transfer date",
+  "TimePicker": "TimePicker",
+  "Time": "Time",
+  "Bank": "Bank"
+}

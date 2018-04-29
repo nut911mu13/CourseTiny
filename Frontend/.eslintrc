@@ -1,0 +1,26 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "no-underscore-dangle": 0,
+    // We use next.js so not require to import React
+    "react/react-in-jsx-scope": 0,
+    "import/named": 2,
+    // A .jsx extension is not required for files containing jsx.
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "max-len": 0,
+    "no-shadow": 0,
+    "no-undef": 0,
+    "react/jsx-no-undef": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/jsx-closing-tag-location": 0,
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/html-has-lang": 0,
+    "no-param-reassign": 0,
+    "react/no-did-mount-set-state": 0,
+    "react/prefer-stateless-function": 0,
+  }
+}

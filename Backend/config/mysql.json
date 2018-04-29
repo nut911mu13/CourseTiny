@@ -1,0 +1,8 @@
+{
+  "connectionLimit" : 10,
+  "host"            : "xxxx",
+  "user"            : "xxx",
+  "password"        : "xxx",
+  "database"        : "xxxxx",
+  "port"            : "xxxx"
+}

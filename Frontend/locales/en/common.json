@@ -1,0 +1,15 @@
+{
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "contact": "Contact",
+    "editProfile": "Edit Your Profile",
+    "orderHistory": "Your Order History",
+    "yourCourse": "Your Course",
+    "withdraw": "Withdraw",
+    "courses": "Courses",
+    "courseService": "Course Service",
+    "category": "Category",
+    "cancel": "Cancel",
+    "save": "Save"
+}

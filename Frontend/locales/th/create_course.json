@@ -1,0 +1,32 @@
+{
+  "startDateEndDate": "วันที่เปิด - วันที่ปิด",
+  "courseTitle": "ชื่อคอร์สอบรม",
+  "location": "สถานที่จัดอบรม",
+  "description": "รายละเอียดคอร์ส",
+  "tickets": "ตั๋ว",
+  "addTicket": "เพิ่มตั๋ว",
+  "editTicket": "แก้ไขตั๋ว",
+  "detail": "รายละเอียด",
+  "startDate": "วันที่เปิด",
+  "endDate": "วันที่ปิด",
+  "quantity": "จำนวน",
+  "price": "ราคา",
+  "action": "ดำเนินการ",
+  "ticketName": "ชื่อตั๋ว",
+  "ticketDetail": "รายละเอียดเพิ่มเติม",
+  "ticketPrice": "ราคาต่อใบ",
+  "ticketQuantity": "จำนวนที่ขายทั้งหมด",
+  "errors": {
+    "courseTitleRequired": "กรุณากรอกชื่อคอร์สอบรม",
+    "courseDateRequired": "กรุณาเลือกวันที่เปิดและวันที่ปิดคอร์สอบรม",
+    "locationRequired": "กรุณากรอกสถานที่จัดอบรม",
+    "categoryRequired": "กรุณาเลือกหมวดหมู่ของคอร์สอบรม",
+    "descriptionRequired": "กรุณากรอกรายละเอียดคอร์ส",
+    "ticketRequired": "กรุณาสร้างอย่างน้อย 1 ตั๋ว",
+    "ticketNameRequired": "กรุณากรอกชื่อตั๋ว",
+    "ticketDetailRequired": "กรุณากรอกรายละเอียดตั๋ว",
+    "ticketDateRequired": "กรุณากรอกวันที่เปิดและวันที่ปิดการขายตั๋ว",
+    "ticketPriceRequired": "กรุณากรอกราคาตั๋ว",
+    "ticketQuantityRequired": "กรุณากรอกจำนวนตั๋วที่ขาย"
+  }
+}
